@@ -28,7 +28,11 @@ print('transpose of matrix A:-', Transpose)
 ```
 <br>
 <img width="419" height="150" alt="image" src="https://github.com/user-attachments/assets/4c0381ab-7b12-438d-a7a0-7e352f801ab1" />
+<br>
+<br>
+<br>
 
+# Practical 2: 
 
 
 
