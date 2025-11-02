@@ -28,7 +28,8 @@ print('transpose of matrix A:-', Transpose)
 ```
 <br>
 OUTPUT<br>
-&nbsp;&nbsp;<img width="419" height="150" alt="image" src="https://github.com/user-attachments/assets/4c0381ab-7b12-438d-a7a0-7e352f801ab1" />
+<br>
+&nbsp;&nbsp;&nbsp;<img width="419" height="150" alt="image" src="https://github.com/user-attachments/assets/4c0381ab-7b12-438d-a7a0-7e352f801ab1" />
 <br>
 <br>
 
@@ -60,7 +61,8 @@ print("The Rank of a Matrix is:", rank)
 ```
 <br>
 OUTPUT<br>
-&nbsp;&nbsp;<img width="441" height="144" alt="image" src="https://github.com/user-attachments/assets/4d8e6475-7154-4ce8-9d08-9a9dce15d20f" />
+<br>
+&nbsp;&nbsp;&nbsp;<img width="441" height="144" alt="image" src="https://github.com/user-attachments/assets/4d8e6475-7154-4ce8-9d08-9a9dce15d20f" />
 
 
 
