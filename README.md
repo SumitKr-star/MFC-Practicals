@@ -30,10 +30,30 @@ print('transpose of matrix A:-', Transpose)
 <img width="419" height="150" alt="image" src="https://github.com/user-attachments/assets/4c0381ab-7b12-438d-a7a0-7e352f801ab1" />
 <br>
 <br>
-<br>
 
 # Practical 2: 
 
+```
+import numpy as np
+
+NC = int(input("Enter the number of columns: "))
+NR = int(input("Enter the number of rows: "))
+
+print("Enter the entries in a single line (separated by space): ")
+
+#user Input of entries in a
+# Single line separated by space 
+entries = list(map(int, input().split()))
+
+#For Printing the Matrix
+matrix = np.array (entries).reshape(NR, NC)
+print("Matrix X is as follows:", '\n', matrix)
+
+# For finding the Rank of a Matrix
+
+rank = np.linalg.matrix_rank(matrix)
+print("The Rank of a Matrix is:", rank)
+```
 
 
 
