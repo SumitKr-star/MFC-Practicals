@@ -34,23 +34,26 @@ print('transpose of matrix A:-', Transpose)
 # Practical 2: 
 
 ```
+#NR = Number of Rows
+#NC = Number of Columns
+
 import numpy as np
 
-NC = int(input("Enter the number of columns: "))
-NR = int(input("Enter the number of rows: "))
+NR = int(input("Enter the number of Rows: "))
+NC = int(input("Enter the number of Columns: "))
 
 print("Enter the entries in a single line (separated by space): ")
 
-#user Input of entries in a
 # Single line separated by space 
 entries = list(map(int, input().split()))
 
 #For Printing the Matrix
+
 matrix = np.array (entries).reshape(NR, NC)
 print("Matrix X is as follows:", '\n', matrix)
 
-# For finding the Rank of a Matrix
 
+# For finding the Rank of a Matrix
 rank = np.linalg.matrix_rank(matrix)
 print("The Rank of a Matrix is:", rank)
 ```
