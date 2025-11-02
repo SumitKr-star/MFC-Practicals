@@ -1,4 +1,4 @@
-# MFC-Practicals
+8# MFC-Practicals
 # Practical 1: Create and transform vectors and matrices (the transpose vector (matrix) conjugate
 #transpose of a vector (matrix)<br>
 <br>
@@ -6,8 +6,8 @@
 #using Numpy<br>
 <br>
 ```
-#NR: Number of Rows<br>
-#NC: Number of Column<br>
+#NR: Number of Rows
+#NC: Number of Columns
 
 import numpy as np
 
