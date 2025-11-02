@@ -1,5 +1,5 @@
 # MFC-Practicals
-# Practical 1: Create and transform vectors and matrices (the transpose vector (matrix) conjugate
+# Practical 1: Create and transform vectors and matrices (the transpose vector (matrix) conjugate.
 #transpose of a vector (matrix)<br>
 <br>
 #Program to transpose a matrix<br>
@@ -28,11 +28,11 @@ print('transpose of matrix A:-', Transpose)
 ```
 <br>
 OUTPUT<br>
-<img width="419" height="150" alt="image" src="https://github.com/user-attachments/assets/4c0381ab-7b12-438d-a7a0-7e352f801ab1" />
+&nbsp;&nbsp;<img width="419" height="150" alt="image" src="https://github.com/user-attachments/assets/4c0381ab-7b12-438d-a7a0-7e352f801ab1" />
 <br>
 <br>
 
-# Practical 2: 
+# Practical 2: Generate teh matrix into echelon form and find its rank. 
 
 ```
 #NR = Number of Rows
@@ -60,7 +60,7 @@ print("The Rank of a Matrix is:", rank)
 ```
 <br>
 OUTPUT<br>
-<img width="441" height="144" alt="image" src="https://github.com/user-attachments/assets/4d8e6475-7154-4ce8-9d08-9a9dce15d20f" />
+&nbsp;&nbsp;<img width="441" height="144" alt="image" src="https://github.com/user-attachments/assets/4d8e6475-7154-4ce8-9d08-9a9dce15d20f" />
 
 
 
