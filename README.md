@@ -57,6 +57,8 @@ print("Matrix X is as follows:", '\n', matrix)
 rank = np.linalg.matrix_rank(matrix)
 print("The Rank of a Matrix is:", rank)
 ```
+<br>
+<img width="441" height="144" alt="image" src="https://github.com/user-attachments/assets/4d8e6475-7154-4ce8-9d08-9a9dce15d20f" />
 
 
 
