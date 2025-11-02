@@ -27,7 +27,8 @@ Transpose= np.transpose(A)
 print('transpose of matrix A:-', Transpose)
 ```
 <br>
-<img width="900" height="500" alt="image" src="https://github.com/user-attachments/assets/db69a7f3-6dd6-4ecc-9fab-2c329eab92bf" />
+<img width="419" height="148" alt="image" src="https://github.com/user-attachments/assets/88ed2f12-9dac-47e3-b9c8-1ac4325869a0" />
+
 
 
 
