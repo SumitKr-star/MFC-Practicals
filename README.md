@@ -1,4 +1,4 @@
-8# MFC-Practicals
+# MFC-Practicals
 # Practical 1: Create and transform vectors and matrices (the transpose vector (matrix) conjugate
 #transpose of a vector (matrix)<br>
 <br>
@@ -27,6 +27,7 @@ Transpose= np.transpose(A)
 print('transpose of matrix A:-', Transpose)
 ```
 <br>
+Output<br>
 <img width="419" height="150" alt="image" src="https://github.com/user-attachments/assets/4c0381ab-7b12-438d-a7a0-7e352f801ab1" />
 <br>
 <br>
@@ -58,6 +59,7 @@ rank = np.linalg.matrix_rank(matrix)
 print("The Rank of a Matrix is:", rank)
 ```
 <br>
+output<br>
 <img width="441" height="144" alt="image" src="https://github.com/user-attachments/assets/4d8e6475-7154-4ce8-9d08-9a9dce15d20f" />
 
 
