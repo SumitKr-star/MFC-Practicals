@@ -3,7 +3,7 @@
 <br>
 #Program to transpose a matrix<br>
 #using Numpy<br>
-<br>
+
 ```
 #NR: Number of Rows
 #NC: Number of Columns
@@ -33,7 +33,6 @@ OUTPUT:-<br>
 <br>
 
 # Practical 2: Generate teh matrix into echelon form and find its rank. 
-
 ```
 #NR = Number of Rows
 #NC = Number of Columns
