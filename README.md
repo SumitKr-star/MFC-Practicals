@@ -26,6 +26,8 @@ A=np.array(entries).reshape(NR,NC)
 Transpose= np.transpose(A)
 print('transpose of matrix A:-', Transpose)
 ```
+<br>
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/db69a7f3-6dd6-4ecc-9fab-2c329eab92bf" />
 
 
 
