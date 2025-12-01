@@ -295,6 +295,7 @@ print("\nOrthonormal Basis:")
 for i, b in enumerate(basis, 1):
     print(f"u{i} =", np.round(b, 3))
 ```
+
 <br>
 <br>
 
