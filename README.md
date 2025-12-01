@@ -97,7 +97,254 @@ print("the Adjoint of a matrix is:", '\n', Adjoint_of_A)
 
 ```
 
-#Practical 4:- 
+#Practical 4:- Solve a system of Homogeneous and non-homogeneous equations using Gauss elimination method
+
+```
+import numpy as np
+
+#Coefficient Matrix (A)
+
+print("Enter the dimensions of coefficient matrix (A):")
+
+NR = int(input("Enter the number of rows: ")) 
+NC = int (input("Enter the number of columns:"))
+
+print("Enter the elements of coefficient matrix (A) in a single line (separated by space):")
+
+coeff entries list (map(float,input().split()))
+
+#Create Coefficient Matrix
+
+Coefficient Matrix = np.array(coeffentries).reshape (NR, NC)
+
+print("\nCoefficient Matrix (A) is as follows:\n", Coefficient Matrix, "\n")
+
+Column Matrix (B)
+
+print("Enter the elements of column matrix (B) in a single line (separated by space):")
+
+column entries list (map (float, input().split()))
+
+Column Matrix np.array(column_entries).reshape (NR, 1) print("\nColumn Matrix (B) is as follows:\n", Column Matrix, "\n")
+
+#Solution of System of Equations using Gauss elimination method Solution np.linalg.solve (Coefficient Matrix, Column Matrix) print("Solution of the system of equations using Gauss elimination method:\n")
+
+print (Solution)
+
+```
+<br>
+
+#Practical 5:- Solve a system of Homogeneous equations using the Gauss Jordan method.
+
+```
+import numpy as np
+
+Coefficient Matrix (A)
+
+print("Enter the dimensions of coefficient matrix (A):")
+
+NR = int(input("Enter the number of TOMS: ")) NC = int (input("Enter the number of columns:"))
+
+print("Enter the elements of coefficient matrix (A) in a single line (separated by space): ") 
+
+coeff entries list (map(float,input().split()))
+
+#Create Coefficient Matrix
+
+Coefficient Matrix =  np.array(coeff_entries).reshape (NR, NC) print("\nCoefficient Matrix (A) is as follows:\n", Coefficient Matrix, "\n")
+
+Column Matrix (B)
+
+print("Enter the elements of column matrix (B) in a single line (separated by space):") 
+column entries = list(map(float, input().split()))
+
+Column Matrix = np.array(column entries).reshape (NR, 1) 
+print("\nColumn Matrix (B) is as follows:\n", Column_Matrix, "\n")
+
+#Solution of System of Equations using Gauss-Jordan (Matrix Inversion) Inv_of Coefficient Matrix np.linalg.inv(Coefficient_Matrix) Solution of the system of Equations np.matmul (Inv of Coefficient Matrix, Column Matrix)
+
+print("Solution of the system of equations using Gauss-Jordan method") print (Solution_of_the_system_of_Equations)
+
+```
+<br>
+
+#Practical 6:- Generate basis of column space, null space, row space and left null space of a matrix space.
+
+```
+
+import numpy as np
+
+# Coefficient Matrix (A) Elements
+print("Enter the dimensions of Matrix (A):")
+NR = int(input("Enter the number of rows: "))
+NC = int(input("Enter the number of columns: "))
+
+print("Enter the elements of Matrix (A) in a single line (separated by space):")
+Entries = list(map(float, input().split()))
+
+# Create Matrix A
+A_np = np.array(Entries).reshape(NR, NC)
+print("\nMatrix (A) is as follows:\n", A_np, "\n")
+
+# Convert NumPy array to SymPy Matrix
+A = Matrix(A_np)
+
+# Null Space of A
+NullSpace_list = A.nullspace()   # Returns a list of vectors
+
+if NullSpace_list:
+    NullSpace = Matrix.hstack(*NullSpace_list)  # Combine vectors into a matrix
+else:
+    NullSpace = Matrix([])  # Empty matrix if null space is zero vector only
+
+print("Null Space of Matrix (A) is:\n", NullSpace, "\n")
+
+# Check whether NullSpace satisfies A * NullSpace = 0
+print("Checking whether NullSpace satisfies A * NullSpace = 0 ...\n")
+if NullSpace_list:
+    print("A * NullSpace =\n", A * NullSpace, "\n")
+else:
+    print("A * NullSpace = [0] (Trivial Null Space)\n")
+
+# Python Code for Rank and Nullity of Matrix
+NoC = A.shape[1]             # Number of columns
+rank = A.rank()              # Rank of matrix
+nullity = NoC - rank         # Nullity of matrix
+
+print("Rank of Matrix (A) =", rank)
+print("Nullity of Matrix (A) =", nullity)
+
+```
+<br>
+<br>
+
+#Practical 7:- Check the linear dependence of vectors. Generate a linear combination of given vectors of Rn/matrices of the same size and find the transition matrix of given matrix space.
+
+```
+
+import numpy as np
+
+# ---- Input vectors ----
+n = int(input("Enter number of vectors: "))
+m = int(input("Enter dimension of each vector: "))
+
+vecs = [list(map(float, input(f"Vector {i+1}: ").split())) for i in range(n)]
+A = np.column_stack(vecs)
+
+print("\nMatrix A:\n", A)
+
+# ---- Check Linear Dependence ----
+r = np.linalg.matrix_rank(A)
+print("\nRank =", r)
+
+print("Linearly Independent" if r == A.shape[1] else "Linearly Dependent")
+
+# ---- Linear Combination ----
+coef = list(map(float, input("\nEnter coefficients: ").split()))
+lc = np.sum([coef[i] * A[:, i] for i in range(n)], axis=0)
+print("\nLinear Combination:", lc)
+
+# ---- Transition Matrix ----
+s = int(input("\nEnter size of square matrices: "))
+print("Enter B1:")
+B1 = np.array([list(map(float, input().split())) for _ in range(s)])
+
+print("Enter B2:")
+B2 = np.array([list(map(float, input().split())) for _ in range(s)])
+
+try:
+    P = np.linalg.inv(B2) @ B1
+    print("\nTransition Matrix:\n", P)
+except np.linalg.LinAlgError:
+    print("B2 is not invertible.")
+
+```
+<br>
+<br>
+
+#Practical 8:-Find the orthonormal basis of a given vector space using the Gram-Schmidt orthogonalization process Code:
+
+```
+import numpy as np
+
+# --- Function to take input vectors ---
+def input_vectors():
+    n = int(input("Enter number of vectors: "))
+    m = int(input("Enter dimension of each vector: "))
+    vectors = []
+    for i in range(n):
+        v = list(map(float, input(f"Enter elements of vector {i+1}: ").split()))
+        vectors.append(np.array(v))
+    return vectors
+
+# --- Gram-Schmidt Orthonormalization ---
+def gram_schmidt(vectors):
+    orthonormal = []
+    for v in vectors:
+        for u in orthonormal:
+            v = v - np.dot(v, u) * u       # Make orthogonal
+        v = v / np.linalg.norm(v)          # Normalize
+        orthonormal.append(v)
+    return orthonormal
+
+# --- Main Program ---
+vectors = input_vectors()
+basis = gram_schmidt(vectors)
+
+print("\nOrthonormal Basis:")
+for i, b in enumerate(basis, 1):
+    print(f"u{i} =", np.round(b, 3))
+```
+<br>
+<br>
+
+#Practical 9:-Check the diagonalizable property of matrices and find the corresponding eigenvalue and verify the Cayley- Hamilton theorem.
+<br>
+```
+import numpy as np
+
+# --- Take matrix input from user ---
+def input_matrix():
+    n = int(input("Enter size of square matrix: "))
+    A = []
+    for i in range(n):
+        A.append(list(map(float, input(f"Row {i+1}: ").split())))
+    return np.array(A)
+
+# --- Find eigenvalues and eigenvectors ---
+def eigen_info(A):
+    values, vectors = np.linalg.eig(A)
+    return values, vectors
+
+# --- Check diagonalizable or not ---
+def check_diagonalizable(A):
+    values, vectors = eigen_info(A)
+    if np.linalg.matrix_rank(vectors) == len(A):
+        print("\nMatrix is Diagonalizable.")
+        print("Eigenvalues:", np.round(values, 3))
+    else:
+        print("\nMatrix is NOT Diagonalizable.")
+        print("Eigenvalues:", np.round(values, 3))
+
+# --- Verify Cayley-Hamilton theorem ---
+def verify_cayley_hamilton(A):
+    p = np.poly(A)        # coefficients of characteristic polynomial
+    n = len(A)
+
+    result = sum([p[i] * np.linalg.matrix_power(A, n - i - 1) for i in range(n)]) + p[-1] * np.eye(n)
+
+    if np.allclose(result, 0):
+        print("Cayley-Hamilton Theorem Verified.")
+    else:
+        print("Cayley-Hamilton Theorem Not Verified.")
+
+# --- Main Program ---
+A = input_matrix()
+check_diagonalizable(A)
+verify_cayley_hamilton(A)
+```
+
+
 
 
 
