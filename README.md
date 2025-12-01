@@ -392,6 +392,7 @@ print("\nDecoded Message:", decoded)
 ```
 <br>
 <br>
+
 # Practical 11:-Compute Gradient of a scalar field.
 <br>
 
@@ -415,6 +416,7 @@ gradient()
 
 <br>
 <br>
+
 # Practical 12:-Compute Divergence of a vector field.
 <br>
 
@@ -447,6 +449,7 @@ divergence()
 ```
 <br>
 <br>
+
 # Practical 13:-Compute Curl of a vector field.
 <br>
 
