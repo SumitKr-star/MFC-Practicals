@@ -97,7 +97,7 @@ print("the Adjoint of a matrix is:", '\n', Adjoint_of_A)
 
 ```
 
-#Practical 4:- Solve a system of Homogeneous and non-homogeneous equations using Gauss elimination method
+# Practical 4:- Solve a system of Homogeneous and non-homogeneous equations using Gauss elimination method
 
 ```
 import numpy as np
@@ -134,7 +134,7 @@ print (Solution)
 ```
 <br>
 
-#Practical 5:- Solve a system of Homogeneous equations using the Gauss Jordan method.
+# Practical 5:- Solve a system of Homogeneous equations using the Gauss Jordan method.
 
 ```
 import numpy as np
@@ -168,7 +168,7 @@ print("Solution of the system of equations using Gauss-Jordan method") print (So
 ```
 <br>
 
-#Practical 6:- Generate basis of column space, null space, row space and left null space of a matrix space.
+# Practical 6:- Generate basis of column space, null space, row space and left null space of a matrix space.
 
 ```
 
@@ -218,7 +218,7 @@ print("Nullity of Matrix (A) =", nullity)
 <br>
 <br>
 
-#Practical 7:- Check the linear dependence of vectors. Generate a linear combination of given vectors of Rn/matrices of the same size and find the transition matrix of given matrix space.
+# Practical 7:- Check the linear dependence of vectors. Generate a linear combination of given vectors of Rn/matrices of the same size and find the transition matrix of given matrix space.
 
 ```
 
@@ -262,7 +262,7 @@ except np.linalg.LinAlgError:
 <br>
 <br>
 
-#Practical 8:-Find the orthonormal basis of a given vector space using the Gram-Schmidt orthogonalization process Code:
+# Practical 8:-Find the orthonormal basis of a given vector space using the Gram-Schmidt orthogonalization process Code:
 
 ```
 import numpy as np
@@ -298,7 +298,7 @@ for i, b in enumerate(basis, 1):
 <br>
 <br>
 
-#Practical 9:-Check the diagonalizable property of matrices and find the corresponding eigenvalue and verify the Cayley- Hamilton theorem.
+# Practical 9:-Check the diagonalizable property of matrices and find the corresponding eigenvalue and verify the Cayley- Hamilton theorem.
 <br>
 ```
 import numpy as np
@@ -344,7 +344,7 @@ check_diagonalizable(A)
 verify_cayley_hamilton(A)
 ```
 <br>
-#Practical 10:-Application of Linear algebra: Coding and decoding of messages using nonsingular matrices. eg code "Linear Algebra is fun" and then decode it.
+# Practical 10:-Application of Linear algebra: Coding and decoding of messages using nonsingular matrices. eg code "Linear Algebra is fun" and then decode it.
 <br>
 ```
 import numpy as np
@@ -383,7 +383,7 @@ print("\nDecoded Message:", decoded)
 ```
 <br>
 <br>
-#Practical 11:-Compute Gradient of a scalar field.
+# Practical 11:-Compute Gradient of a scalar field.
 <br>
 ```
 import sympy as sp
@@ -403,7 +403,7 @@ gradient()
 ```
 <br>
 <br>
-#Practical 12:-Compute Divergence of a vector field.
+# Practical 12:-Compute Divergence of a vector field.
 <br>
 
 ```
@@ -434,7 +434,7 @@ divergence()
 ```
 <br>
 <br>
-#Practical 13:-Compute Curl of a vector field.
+# Practical 13:-Compute Curl of a vector field.
 <br>
 ```
 import sympy as sp
