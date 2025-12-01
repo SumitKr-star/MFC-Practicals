@@ -265,6 +265,7 @@ except np.linalg.LinAlgError:
 # Practical 8:-Find the orthonormal basis of a given vector space using the Gram-Schmidt orthogonalization process Code:
 
 ```
+
 import numpy as np
 
 # --- Function to take input vectors ---
@@ -301,7 +302,9 @@ for i, b in enumerate(basis, 1):
 
 # Practical 9:-Check the diagonalizable property of matrices and find the corresponding eigenvalue and verify the Cayley- Hamilton theorem.
 <br>
+
 ```
+
 import numpy as np
 
 # --- Take matrix input from user ---
@@ -343,10 +346,12 @@ def verify_cayley_hamilton(A):
 A = input_matrix()
 check_diagonalizable(A)
 verify_cayley_hamilton(A)
+
 ```
 <br>
 # Practical 10:-Application of Linear algebra: Coding and decoding of messages using nonsingular matrices. eg code "Linear Algebra is fun" and then decode it.
 <br>
+
 ```
 import numpy as np
 
