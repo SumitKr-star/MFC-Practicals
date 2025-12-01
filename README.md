@@ -343,8 +343,119 @@ A = input_matrix()
 check_diagonalizable(A)
 verify_cayley_hamilton(A)
 ```
+<br>
+#Practical 10:-Application of Linear algebra: Coding and decoding of messages using nonsingular matrices. eg code "Linear Algebra is fun" and then decode it.
+<br>
+```
+import numpy as np
 
+# --- Encode function ---
+def encode(msg, key):
+    msg = msg.upper().replace(" ", "")
+    nums = [ord(c) - 64 for c in msg]      # A=1, B=2, ...
+    
+    while len(nums) % len(key) != 0:       # padding if needed
+        nums.append(0)
+    
+    nums = np.array(nums).reshape(-1, len(key))
+    coded = nums.dot(key)
+    return coded
 
+# --- Decode function ---
+def decode(coded, key):
+    inv_key = np.linalg.inv(key)
+    decoded = coded.dot(inv_key).flatten()
+    text = ''.join(chr(int(round(n)) + 64) if n > 0 else ' ' for n in decoded)
+    return text
 
+# --- Main ---
+message = "LINEAR ALGEBRA IS FUN"
+key = np.array([[2, 1], [1, 1]])          # simple nonsingular matrix
 
+print("Original Message:", message)
 
+coded = encode(message, key)
+print("\nEncoded Matrix:\n", np.round(coded))
+
+decoded = decode(coded, key)
+print("\nDecoded Message:", decoded)
+
+```
+<br>
+<br>
+#Practical 11:-Compute Gradient of a scalar field.
+<br>
+```
+import sympy as sp
+
+def gradient():
+    x, y = sp.symbols('x y')     # two variables
+    f = input("Enter scalar function f(x, y): ")   # example: x**2 + 3*y
+    f = sp.sympify(f)
+    fx = sp.diff(f, x)
+    fy = sp.diff(f, y)
+    print("\nGradient of f(x, y):")
+    print("∇F = ({fx}, {fy})")
+
+# --- Main ---
+gradient()
+
+```
+<br>
+<br>
+#Practical 12:-Compute Divergence of a vector field.
+<br>
+
+```
+import sympy as sp
+
+def divergence():
+    # define variables
+    x, y, z = sp.symbols('x y z')
+
+    # take vector field input
+    Fx = input("Enter Fx: ")   # example: x*y
+    Fy = input("Enter Fy: ")   # example: y*z
+    Fz = input("Enter Fz: ")   # example: z*x
+
+    # convert to symbolic form
+    Fx, Fy, Fz = sp.sympify(Fx), sp.sympify(Fy), sp.sympify(Fz)
+
+    # compute divergence
+    div = sp.diff(Fx, x) + sp.diff(Fy, y) + sp.diff(Fz, z)
+
+    # print result
+    print("\nDivergence of F = ∂Fx/∂x + ∂Fy/∂y + ∂Fz/∂z")
+    print("Divergence =", div)
+
+# --- Main ---
+divergence()
+
+```
+<br>
+<br>
+#Practical 13:-Compute Curl of a vector field.
+<br>
+```
+import sympy as sp
+
+def curl():
+    # Define symbols
+    x, y, z = sp.symbols('x y z')
+
+    # Read components of the vector field as strings and convert to SymPy
+    Fx = sp.sympify(input("Enter Fx: "))
+    Fy = sp.sympify(input("Enter Fy: "))
+    Fz = sp.sympify(input("Enter Fz: "))
+
+    # Partial derivatives for curl F = (dFz/dy - dFy/dz, dFx/dz - dFz/dx, dFy/dx - dFx/dy)
+    curl_x = sp.diff(Fz, y) - sp.diff(Fy, z)
+    curl_y = sp.diff(Fx, z) - sp.diff(Fz, x)
+    curl_z = sp.diff(Fy, x) - sp.diff(Fx, y)
+
+    print("curl F =", (curl_x, curl_y, curl_z))
+
+# Run
+curl()
+
+```
