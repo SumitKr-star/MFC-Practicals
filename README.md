@@ -348,11 +348,14 @@ check_diagonalizable(A)
 verify_cayley_hamilton(A)
 
 ```
+
 <br>
+
 # Practical 10:-Application of Linear algebra: Coding and decoding of messages using nonsingular matrices. eg code "Linear Algebra is fun" and then decode it.
 <br>
 
 ```
+
 import numpy as np
 
 # --- Encode function ---
@@ -391,7 +394,9 @@ print("\nDecoded Message:", decoded)
 <br>
 # Practical 11:-Compute Gradient of a scalar field.
 <br>
+
 ```
+
 import sympy as sp
 
 def gradient():
@@ -407,12 +412,14 @@ def gradient():
 gradient()
 
 ```
+
 <br>
 <br>
 # Practical 12:-Compute Divergence of a vector field.
 <br>
 
 ```
+
 import sympy as sp
 
 def divergence():
@@ -442,7 +449,9 @@ divergence()
 <br>
 # Practical 13:-Compute Curl of a vector field.
 <br>
+
 ```
+
 import sympy as sp
 
 def curl():
